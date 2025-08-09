@@ -1,6 +1,5 @@
-
 import React, { useEffect, useMemo, useState } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import {
   Menu,
   X,
@@ -36,7 +35,11 @@ const HeadTags: React.FC<{
   title?: string;
   description?: string;
   path?: string;
-}> = ({ title = "TruView Glass", description = "Premium glass solutions: shower screens, balustrades, mirrors & more.", path = "/" }) => {
+}> = ({
+  title = "TruView Glass",
+  description = "Premium glass solutions: shower screens, balustrades, mirrors & more.",
+  path = "/",
+}) => {
   const url = `https://truview.glass${path}`;
 
   useEffect(() => {
@@ -83,8 +86,8 @@ const HeadTags: React.FC<{
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://truview.glass/search?q={query}",
-            "query-input": "required name=query"
-          }
+            "query-input": "required name=query",
+          },
         },
         {
           "@type": "Organization",
@@ -94,10 +97,10 @@ const HeadTags: React.FC<{
           "sameAs": [
             "https://www.facebook.com/yourpage",
             "https://www.instagram.com/yourprofile",
-            "https://www.youtube.com/@yourchannel"
-          ]
-        }
-      ]
+            "https://www.youtube.com/@yourchannel",
+          ],
+        },
+      ],
     };
 
     const script = document.createElement("script");
@@ -141,13 +144,20 @@ const Hero: React.FC = () => (
             Crystal-clear craftsmanship for modern spaces
           </h1>
           <p className="mt-4 text-lg text-white/80">
-            Shower screens, balustrades, mirrors & bespoke glasswork — precision installed with a lifetime focus on safety and style.
+            Shower screens, balustrades, mirrors & bespoke glasswork — precision installed with a lifetime focus on
+            safety and style.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#/contact" className="inline-flex items-center rounded-xl bg-white/90 hover:bg-white text-slate-900 px-5 py-3 font-medium shadow">
+            <a
+              href="#/contact"
+              className="inline-flex items-center rounded-xl bg-white/90 hover:bg-white text-slate-900 px-5 py-3 font-medium shadow"
+            >
               Get a quote <ArrowRight className="ml-2 h-5 w-5" />
             </a>
-            <a href="#/services" className="inline-flex items-center rounded-xl border border-white/30 bg-white/10 hover:bg-white/20 px-5 py-3 text-white">
+            <a
+              href="#/services"
+              className="inline-flex items-center rounded-xl border border-white/30 bg-white/10 hover:bg-white/20 px-5 py-3 text-white"
+            >
               Our services
             </a>
           </div>
@@ -230,7 +240,10 @@ const CTA: React.FC = () => (
         <h3 className="text-2xl font-semibold text-white">Ready to upgrade with glass?</h3>
         <p className="text-white/80 mt-1">Fast quoting. Quality workmanship. Local support.</p>
       </div>
-      <a href="#/contact" className="inline-flex items-center rounded-xl bg-white/90 hover:bg-white text-slate-900 px-5 py-3 font-medium shadow">
+      <a
+        href="#/contact"
+        className="inline-flex items-center rounded-xl bg-white/90 hover:bg-white text-slate-900 px-5 py-3 font-medium shadow"
+      >
         Contact us <ArrowRight className="ml-2 h-5 w-5" />
       </a>
     </GlassCard>
@@ -243,7 +256,10 @@ const PrivacyPage: React.FC = () => (
     <Container className="py-16">
       <GlassCard>
         <h2 className="text-3xl font-semibold text-white">Privacy Policy</h2>
-        <p className="text-white/80 mt-4">We respect your privacy. We only collect information necessary to respond to enquiries and deliver services. We do not sell your data. You may request access or deletion at any time by contacting <span className="underline">hello@truview.glass</span>.</p>
+        <p className="text-white/80 mt-4">
+          We respect your privacy. We only collect information necessary to respond to enquiries and deliver services. We do not sell your
+          data. You may request access or deletion at any time by contacting <span className="underline">hello@truview.glass</span>.
+        </p>
         <ul className="list-disc pl-6 mt-6 text-white/80 space-y-2">
           <li>Data we collect: contact details, project info, correspondence.</li>
           <li>Use: quotes, scheduling, service delivery, invoicing.</li>
@@ -261,7 +277,10 @@ const TermsPage: React.FC = () => (
     <Container className="py-16">
       <GlassCard>
         <h2 className="text-3xl font-semibold text-white">Terms & Conditions</h2>
-        <p className="text-white/80 mt-4">By engaging TruView Glass you agree to our standard terms: quotes valid for 30 days; site access and measurements must be accurate; custom glass orders are non-refundable except under Australian consumer law.</p>
+        <p className="text-white/80 mt-4">
+          By engaging TruView Glass you agree to our standard terms: quotes valid for 30 days; site access and measurements must be
+          accurate; custom glass orders are non-refundable except under Australian consumer law.
+        </p>
         <ul className="list-disc pl-6 mt-6 text-white/80 space-y-2">
           <li>Payment terms: as quoted; deposits may be required for custom fabrication.</li>
           <li>Warranty: workmanship guaranteed; materials covered by manufacturer warranties.</li>
@@ -284,18 +303,31 @@ const HomePage: React.FC = () => (
 
 const AboutPage: React.FC = () => (
   <>
-    <HeadTags title="About | TruView Glass" path="/about" description="Learn about TruView Glass — values, qualifications and safety-first workmanship." />
+    <HeadTags
+      title="About | TruView Glass"
+      path="/about"
+      description="Learn about TruView Glass — values, qualifications and safety-first workmanship."
+    />
     <Container className="py-16">
       <div className="grid lg:grid-cols-2 gap-10 items-start">
         <GlassCard>
-          <h2 className="text-3xl font-semibold text-white flex items-center gap-3"><Info className="h-7 w-7" /> Our story</h2>
+          <h2 className="text-3xl font-semibold text-white flex items-center gap-3">
+            <Info className="h-7 w-7" /> Our story
+          </h2>
           <p className="mt-4 text-white/80">
-            TruView Glass delivers precise, reliable glass solutions for homes and businesses. Our team blends craftsmanship with compliance, ensuring your project looks stunning and meets Australian standards.
+            TruView Glass delivers precise, reliable glass solutions for homes and businesses. Our team blends craftsmanship with
+            compliance, ensuring your project looks stunning and meets Australian standards.
           </p>
           <ul className="mt-6 space-y-3 text-white/90">
-            <li className="flex items-center gap-3"><ShieldCheck className="h-5 w-5" /> Licensed & insured installers</li>
-            <li className="flex items-center gap-3"><Hammer className="h-5 w-5" /> Clean site, on-time delivery</li>
-            <li className="flex items-center gap-3"><Sparkles className="h-5 w-5" /> Attention to detail, end-to-end</li>
+            <li className="flex items-center gap-3">
+              <ShieldCheck className="h-5 w-5" /> Licensed & insured installers
+            </li>
+            <li className="flex items-center gap-3">
+              <Hammer className="h-5 w-5" /> Clean site, on-time delivery
+            </li>
+            <li className="flex items-center gap-3">
+              <Sparkles className="h-5 w-5" /> Attention to detail, end-to-end
+            </li>
           </ul>
         </GlassCard>
         <GlassCard>
@@ -320,10 +352,7 @@ const ServicesPage: React.FC = () => (
       <p className="text-white/80 mt-2">We measure, fabricate and install to spec. Here’s what we specialise in:</p>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-8">
         {[
-          {
-            title: "Frameless shower screens",
-            copy: "Minimal hardware. Maximum clarity.",
-          },
+          { title: "Frameless shower screens", copy: "Minimal hardware. Maximum clarity." },
           { title: "Mirrors", copy: "Polished edges, custom sizing & mounting." },
           { title: "Balustrades", copy: "Stainless hardware with compliant spans." },
           { title: "Pool fencing", copy: "Safe, elegant, corrosion-resistant." },
@@ -356,7 +385,11 @@ const GalleryPage: React.FC = () => (
           "https://images.unsplash.com/photo-1523419409543-a9be2a93139b?q=80&w=1600&auto=format&fit=crop",
         ].map((src, i) => (
           <div key={i} className="relative group overflow-hidden rounded-xl ring-1 ring-white/20">
-            <img src={src} alt="TruView project" className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img
+              src={src}
+              alt="TruView project"
+              className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
           </div>
         ))}
       </div>
@@ -375,23 +408,42 @@ const ContactPage: React.FC = () => (
           <form className="mt-6 space-y-4" onSubmit={(e) => e.preventDefault()}>
             <div>
               <label className="block text-sm text-white/80">Name</label>
-              <input className="mt-1 w-full rounded-xl bg-white/80 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none" placeholder="Jane Doe" required />
+              <input
+                className="mt-1 w-full rounded-xl bg-white/80 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none"
+                placeholder="Jane Doe"
+                required
+              />
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm text-white/80">Email</label>
-                <input type="email" className="mt-1 w-full rounded-xl bg-white/80 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none" placeholder="jane@email.com" required />
+                <input
+                  type="email"
+                  className="mt-1 w-full rounded-xl bg-white/80 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none"
+                  placeholder="jane@email.com"
+                  required
+                />
               </div>
               <div>
                 <label className="block text-sm text-white/80">Phone</label>
-                <input className="mt-1 w-full rounded-xl bg-white/80 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none" placeholder="0400 000 000" />
+                <input
+                  className="mt-1 w-full rounded-xl bg-white/80 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none"
+                  placeholder="0400 000 000"
+                />
               </div>
             </div>
             <div>
               <label className="block text-sm text-white/80">Message</label>
-              <textarea rows={5} className="mt-1 w-full rounded-xl bg-white/80 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none" placeholder="Project details, dimensions, timelines..." />
+              <textarea
+                rows={5}
+                className="mt-1 w-full rounded-xl bg-white/80 px-4 py-3 text-slate-900 placeholder-slate-500 outline-none"
+                placeholder="Project details, dimensions, timelines..."
+              />
             </div>
-            <button className="inline-flex items-center rounded-xl bg-white/90 hover:bg-white text-slate-900 px-5 py-3 font-medium shadow" type="submit">
+            <button
+              className="inline-flex items-center rounded-xl bg-white/90 hover:bg-white text-slate-900 px-5 py-3 font-medium shadow"
+              type="submit"
+            >
               Send enquiry
             </button>
           </form>
@@ -399,14 +451,26 @@ const ContactPage: React.FC = () => (
         <GlassCard>
           <h3 className="text-xl font-semibold text-white">Contact details</h3>
           <ul className="mt-4 space-y-3 text-white/90">
-            <li className="flex items-center gap-3"><Phone className="h-5 w-5" /> 0400 000 000</li>
-            <li className="flex items-center gap-3"><Mail className="h-5 w-5" /> hello@truview.glass</li>
-            <li className="flex items-center gap-3"><MapPin className="h-5 w-5" /> Your City, VIC</li>
+            <li className="flex items-center gap-3">
+              <Phone className="h-5 w-5" /> 0400 000 000
+            </li>
+            <li className="flex items-center gap-3">
+              <Mail className="h-5 w-5" /> hello@truview.glass
+            </li>
+            <li className="flex items-center gap-3">
+              <MapPin className="h-5 w-5" /> Your City, VIC
+            </li>
           </ul>
           <div className="mt-6 flex gap-3">
-            <a href="#" aria-label="Facebook" className="p-2 rounded-lg bg-white/10 hover:bg-white/20 ring-1 ring-white/20"><Facebook className="h-5 w-5 text-white" /></a>
-            <a href="#" aria-label="Instagram" className="p-2 rounded-lg bg-white/10 hover:bg-white/20 ring-1 ring-white/20"><Instagram className="h-5 w-5 text-white" /></a>
-            <a href="#" aria-label="YouTube" className="p-2 rounded-lg bg-white/10 hover:bg-white/20 ring-1 ring-white/20"><Youtube className="h-5 w-5 text-white" /></a>
+            <a href="#" aria-label="Facebook" className="p-2 rounded-lg bg-white/10 hover:bg-white/20 ring-1 ring-white/20">
+              <Facebook className="h-5 w-5 text-white" />
+            </a>
+            <a href="#" aria-label="Instagram" className="p-2 rounded-lg bg-white/10 hover:bg-white/20 ring-1 ring-white/20">
+              <Instagram className="h-5 w-5 text-white" />
+            </a>
+            <a href="#" aria-label="YouTube" className="p-2 rounded-lg bg-white/10 hover:bg-white/20 ring-1 ring-white/20">
+              <Youtube className="h-5 w-5 text-white" />
+            </a>
           </div>
         </GlassCard>
       </div>
@@ -440,11 +504,18 @@ const Nav: React.FC = () => {
                   {l.label}
                 </a>
               ))}
-              <a href="#/contact" className="inline-flex items-center rounded-xl bg-white/90 hover:bg-white text-slate-900 px-4 py-2 font-medium shadow">
+              <a
+                href="#/contact"
+                className="inline-flex items-center rounded-xl bg-white/90 hover:bg-white text-slate-900 px-4 py-2 font-medium shadow"
+              >
                 Get a quote
               </a>
             </div>
-            <button className="md:hidden p-2 rounded-lg bg-white/10 ring-1 ring-white/20" onClick={() => setOpen((v) => !v)} aria-label="Toggle menu">
+            <button
+              className="md:hidden p-2 rounded-lg bg-white/10 ring-1 ring-white/20"
+              onClick={() => setOpen((v) => !v)}
+              aria-label="Toggle menu"
+            >
               {open ? <X className="h-5 w-5 text-white" /> : <Menu className="h-5 w-5 text-white" />}
             </button>
           </div>
@@ -473,8 +544,12 @@ const Footer: React.FC = () => (
             <div className="text-white/70 text-sm">© {new Date().getFullYear()} All rights reserved.</div>
           </div>
           <div className="flex gap-4 text-white/80">
-            <a href="#/privacy" className="hover:text-white">Privacy</a>
-            <a href="#/terms" className="hover:text-white">Terms</a>
+            <a href="#/privacy" className="hover:text-white">
+              Privacy
+            </a>
+            <a href="#/terms" className="hover:text-white">
+              Terms
+            </a>
           </div>
         </div>
       </div>
@@ -498,19 +573,19 @@ const RouterView: React.FC = () => {
   const route = useHashRoute();
   const Page = useMemo(() => {
     switch (route) {
-        case "/about":
-          return <AboutPage />;
-        case "/services":
-          return <ServicesPage />;
-        case "/gallery":
-          return <GalleryPage />;
-        case "/contact":
-          return <ContactPage />;
-        case "/privacy":
-          return <PrivacyPage />;
-        case "/terms":
-          return <TermsPage />;
-        default:
+      case "/about":
+        return <AboutPage />;
+      case "/services":
+        return <ServicesPage />;
+      case "/gallery":
+        return <GalleryPage />;
+      case "/contact":
+        return <ContactPage />;
+      case "/privacy":
+        return <PrivacyPage />;
+      case "/terms":
+        return <TermsPage />;
+      default:
         return <HomePage />;
     }
   }, [route]);
